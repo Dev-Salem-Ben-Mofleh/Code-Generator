@@ -1,0 +1,9 @@
+E:\Code Generator\Bussinse\obj\Debug\Bussinse.csproj.AssemblyReference.cache
+E:\Code Generator\Bussinse\obj\Debug\Bussinse.csproj.CoreCompileInputs.cache
+E:\Code Generator\Bussinse\bin\Debug\Bussinse.dll
+E:\Code Generator\Bussinse\bin\Debug\Bussinse.pdb
+E:\Code Generator\Bussinse\bin\Debug\DataAccess.dll
+E:\Code Generator\Bussinse\bin\Debug\DataAccess.pdb
+E:\Code Generator\Bussinse\obj\Debug\Bussinse.csproj.CopyComplete
+E:\Code Generator\Bussinse\obj\Debug\Bussinse.dll
+E:\Code Generator\Bussinse\obj\Debug\Bussinse.pdb

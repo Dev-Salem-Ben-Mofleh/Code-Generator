@@ -1,0 +1,6 @@
+E:\Code Generator\DataAccess\bin\Debug\DataAccess.dll
+E:\Code Generator\DataAccess\bin\Debug\DataAccess.pdb
+E:\Code Generator\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+E:\Code Generator\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\Code Generator\DataAccess\obj\Debug\DataAccess.dll
+E:\Code Generator\DataAccess\obj\Debug\DataAccess.pdb

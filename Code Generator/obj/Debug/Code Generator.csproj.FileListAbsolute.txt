@@ -1,0 +1,32 @@
+E:\Code Generator\obj\Debug\Code Generator.csproj.AssemblyReference.cache
+E:\Code Generator\obj\Debug\Code Generator.csproj.SuggestedBindingRedirects.cache
+E:\Code Generator\obj\Debug\Code_Generator.frmCodeGenerator.resources
+E:\Code Generator\obj\Debug\Code_Generator.Properties.Resources.resources
+E:\Code Generator\obj\Debug\Code Generator.csproj.GenerateResource.cache
+E:\Code Generator\obj\Debug\Code Generator.csproj.CoreCompileInputs.cache
+E:\Code Generator\bin\Debug\Code Generator.exe.config
+E:\Code Generator\bin\Debug\Code Generator.exe
+E:\Code Generator\bin\Debug\Code Generator.pdb
+E:\Code Generator\bin\Debug\Bussinse.dll
+E:\Code Generator\bin\Debug\DataAccess.dll
+E:\Code Generator\bin\Debug\Bussinse.pdb
+E:\Code Generator\bin\Debug\DataAccess.pdb
+E:\Code Generator\obj\Debug\Code Generator.csproj.CopyComplete
+E:\Code Generator\obj\Debug\Code Generator.exe
+E:\Code Generator\obj\Debug\Code Generator.pdb
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\bin\Debug\Code Generator.exe.config
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\bin\Debug\Code Generator.exe
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\bin\Debug\Code Generator.pdb
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\bin\Debug\Bussinse.dll
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\bin\Debug\DataAccess.dll
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\bin\Debug\Bussinse.pdb
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\bin\Debug\DataAccess.pdb
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.csproj.AssemblyReference.cache
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.csproj.SuggestedBindingRedirects.cache
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code_Generator.frmCodeGenerator.resources
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code_Generator.Properties.Resources.resources
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.csproj.GenerateResource.cache
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.csproj.CoreCompileInputs.cache
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.csproj.CopyComplete
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.exe
+E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.pdb
