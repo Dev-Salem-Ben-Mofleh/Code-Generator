@@ -331,7 +331,7 @@ namespace Bussinse
                     $"        {_FillAllParamtersForConstructor1(true)} " +
                     $"            Mode = enMode.AddNew;\r\n" +
                     $"        }}\r\n\r\n" +
-                    $"        private cls{TableNameForOne}(int? {PrimeryKey},{_GetAllParamtersForAddAndUpdate(true)})\r\n" +
+                    $"        public cls{TableNameForOne}(int? {PrimeryKey},{_GetAllParamtersForAddAndUpdate(true)})\r\n" +
                     $"        {{\r\n" +
                     $"            this.{PrimeryKey} = {PrimeryKey};\r\n " +
                     $"           {_FillAllParamtersForConstructor2(true)}" +
