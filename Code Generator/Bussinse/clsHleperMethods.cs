@@ -1,181 +1,140 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq.Expressions;
-using System.Net.Http;
 
-
-namespace DataAccess
+namespace Bussinse
 {
-    public class clsDataAccess
+    public static class clsHleperMethods
     {
-        public static DataTable GetAll()
+        public static string GitDataType(string DataType)
         {
-            DataTable dt = new DataTable();
-
-            try
+            switch (DataType)
             {
-                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString()))
-                {
-                    connection.Open();
+                case "datetimeoffset":
+                    return "DateTimeOffset";
+                case "variant":
+                case "udt":
+                case "structured":
+                    return "object";
+                case "tinyint":
+                    return "byte";
+                case "smallint":
+                    return "short?";
+                case "bigInt":
+                    return "long?";
+                case "binary":
+                case "image":
+                case "varvinary":
+                case "timestamp":
+                    return "byte[]";
+                case "bit":
+                    return "bool";
+                case "datetime":
+                case "datetime2":
+                case "date":
+                case "smalldatetime":
+                    return "DateTime";
+                case "time":
+                    return "TimeSpan";
+                case "char":
+                case "nchar":
+                case "ntext":
+                case "nvarchar":
+                case "varchar":
+                case "xml":
+                case "text":
+                    return "string";
+                case "decimal":
+                case "smallmoney":
+                case "money":
+                case "real":
+                    return "decimal";
+                case "float":
+                    return "double";
+                case "int":
+                    return "int?";
+                case "uniqueIdentifier":
+                    return "Guid";
 
-                    string query = @"SELECT name AS DatabaseName
-                             FROM sys.databases
-                             WHERE database_id > 4
-                             ORDER BY create_date DESC";
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                            {
-                                dt.Load(reader);
-                            }
-                        }
-                    }
-                }
             }
-            catch (SqlException ex)
-            {
-                clsErrorLogger loggerToEventViewer = new clsErrorLogger(clsLogHandler.LogToEventViewer);
-                loggerToEventViewer.LogError("Database Exception", ex);
-            }
-            catch (Exception ex)
-            {
-                clsErrorLogger loggerToEventViewer = new clsErrorLogger(clsLogHandler.LogToEventViewer);
-                loggerToEventViewer.LogError("General Exception", ex);
-            }
-
-            return dt;
+            return "No";
         }
-
-        public static void FillTablesOfDataBase(string DatabaseName, ref List<string> Tables)
+        public static string GitDefaultValue(string DataType)
         {
-
-            DataTable tables = _GetAllTablesNameInASpecificDatabase(DatabaseName);
-
-            foreach (DataRow table in tables.Rows)
+            switch (DataType)
             {
+                case "int":
+                case "bigInt":
+                case "SmallInt":
+                    return "null"; // Default for integer types
 
-                string tableName = table["TableName"].ToString();
-                Tables.Add(tableName);
+                case "float":
+                    return "-1F;"; // Default for float
 
-            }
-        }
-        private static DataTable _GetAllTablesNameInASpecificDatabase(string DatabaseName)
-        {
-            DataTable dt = new DataTable();
+                case "decimal":
+                case "money":
+                case "smallmoney":
+                    return "-1M;"; // Default for decimal types
 
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString(DatabaseName)))
-                {
-                    connection.Open();
+                case "tinyint":
+                    return "0;"; // Default for tinyint (byte)
 
-                    string query = @"SELECT name AS TableName
-                                 FROM sys.tables 
-                                 WHERE name <> 'sysdiagrams'
-                                 Order by name;";
+                case "varchar":
+                case "nvarchar":
+                case "text":
+                    return "string.Empty;"; // Default for variable-length strings
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                            {
-                                dt.Load(reader);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                clsErrorLogger loggerToEventViewer = new clsErrorLogger(clsLogHandler.LogToEventViewer);
-                loggerToEventViewer.LogError("Database Exception", ex);
-            }
-            catch (Exception ex)
-            {
-                clsErrorLogger loggerToEventViewer = new clsErrorLogger(clsLogHandler.LogToEventViewer);
-                loggerToEventViewer.LogError("General Exception", ex);
-            }
+                case "char":
+                case "nchar":
+                    return "' ';"; // Default for fixed-length strings
 
-            return dt;
-        }
+                case "datetime":
+                case "date":
+                case "smallDateTime":
+                case "datetime2":
+                    return "DateTime.Now;"; // Default for DateTime
 
-        private static DataTable _GetColumnsNameWithInfo(string tableName, string databaseName)
-        {
-            DataTable dt = new DataTable();
+                case "time":
+                    return "TimeSpan.Zero;"; // Default for TimeSpan
 
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString(databaseName)))
-                {
-                    connection.Open();
+                case "bit":
+                    return "false;"; // Default for boolean
 
-                    string query = @"SELECT
-                                 COLUMN_NAME ,
-                                 DATA_TYPE ,
-                                 IS_NULLABLE ,
-                                 CHARACTER_MAXIMUM_LENGTH 
-                             FROM
-                                 INFORMATION_SCHEMA.COLUMNS
-                             WHERE
-                                 TABLE_NAME = @TableName
-                             ORDER BY
-                                 ORDINAL_POSITION;";
+                case "uniqueidentifier":
+                    return "Guid.Empty;"; // Default for GUIDs
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@TableName", tableName);
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                            {
-                                dt.Load(reader);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                clsErrorLogger loggerToEventViewer = new clsErrorLogger(clsLogHandler.LogToEventViewer);
-                loggerToEventViewer.LogError("Database Exception", ex);
-            }
-            catch (Exception ex)
-            {
-                clsErrorLogger loggerToEventViewer = new clsErrorLogger(clsLogHandler.LogToEventViewer);
-                loggerToEventViewer.LogError("General Exception", ex);
-            }
+                case "binary":
+                case "barbinary":
+                case "timestamp":
+                case "Image":
+                    return "new byte[0];"; // Default for binary data
 
+                case "xml":
+                    return "string.Empty;"; // Default for XML data
 
-            return dt;
-        }
+                case "Real":
+                    return "-1.0F;"; // Default for Real (single-precision float)
 
-        public static void FillParamtersOfDataBase(string DatabaseName, string TableName, ref SortedDictionary<string, string> Parametrs, ref string PrimeryKeys)
-        {
-            DataTable dataTable = _GetColumnsNameWithInfo(TableName, DatabaseName);
-            foreach (DataRow column in dataTable.Rows)
-            {
-                string columnName = column["COLUMN_NAME"].ToString();
-                string dataType = column["DATA_TYPE"].ToString();
-                string isNullable = column["IS_NULLABLE"].ToString();
-                string CHARACTER_MAXIMUM_LENGTH = column["CHARACTER_MAXIMUM_LENGTH"].ToString();
+                case "variant":
+                case "udt":
+                case "structured":
+                    return "null;"; // Default for Variant, UDT, Structured
 
-                Parametrs.Add(columnName, dataType + "," + isNullable+","+ CHARACTER_MAXIMUM_LENGTH);
-                if (PrimeryKeys=="")
-                {
-                    PrimeryKeys = columnName;
-                }
+                case "datetimeoffset":
+                    return "DateTimeOffset.Now;"; // Default for DateTime with timezone
 
+                default:
+                    return "null;"; // Default for any other types
             }
         }
+        public static bool IsString(string DataType)=>
+            (DataType == "nvarchar" || DataType == "varchar" || DataType == "ntext" || DataType == "text" || DataType == "xml");
+        public static bool IsInt(string DataType) =>(DataType == "long" || DataType == "int");
+
+
     }
 }
