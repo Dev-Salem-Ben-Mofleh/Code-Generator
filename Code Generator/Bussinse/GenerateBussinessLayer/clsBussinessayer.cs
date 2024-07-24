@@ -296,15 +296,7 @@ namespace Bussinse
             return AllParamters;
         }
 
-        private string _GetNameSpaceBussiness()
-        {
-           return (_bussiness.NameSpaceBussiness == "" ? "InstituteBussiness" : _bussiness.NameSpaceBussiness);
-        }
-
-        private string _GetNameSpaceDataAccess()
-        {
-            return (_bussiness.NameSpaceBussiness == "" ? "InstituteDataAccess" : _bussiness.NameSpaceBussiness);
-        }
+      
 
         public StringBuilder GenerateBussinessLayer(string TableName)
         {
@@ -316,8 +308,8 @@ namespace Bussinse
 
                 BussinessLayer.Append($"using System;\r\n" +
                     $"using System.Data;\r\n" +
-                    $"using {_GetNameSpaceDataAccess()};\r\n\r\n" +
-                    $"namespace {_GetNameSpaceBussiness()}\r\n" +
+                    $"using InstituteDataAccess ;\r\n\r\n" +
+                    $"namespace InstituteBussiness \r\n" +
                     $"{{\r\n" +
                     $"    public class cls{TableNameForOne}\r\n" +
                     $"    {{\r\n" +

@@ -200,10 +200,6 @@ namespace Bussinse
             AllParamters = AllParamters.AppendLine("\r\n\r\n");
             return AllParamters;
         }
-        private string _GetNameSpaceDataAccess()
-        {
-            return  (_bussiness.NameSpaceDataAccess == "" ? "InstituteDataAccess" : _bussiness.NameSpaceDataAccess);
-        }
 
         public StringBuilder GenerateDataAcesss(string TableName )
         {
@@ -215,7 +211,7 @@ namespace Bussinse
                 $"using System;\r\n" +
             $"using System.Data;\r\n" +
             $"using System.Data.SqlClient;\r\n\r\n" +
-            $"namespace {_GetNameSpaceDataAccess()}\r\n" +
+            $"namespace InstituteDataAccess \r\n" +
             $"{{\r\n" +
             $"    public class cls{TableNameForOne}Data\r\n" +
             $"    {{\r\n" +

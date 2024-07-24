@@ -243,8 +243,6 @@ namespace Code_Generator
             }
             if (MessageBox.Show("Are you sure you want to generate data_access calsses into this path", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question )== DialogResult.Yes)
             {
-                List<string> NameSapceDataAceess = txtPathAccessLayer.Text.Split('\\').ToList();
-                _bussiness.NameSpaceDataAccess = NameSapceDataAceess[NameSapceDataAceess.Count - 1];
                 _bussiness.GenerateAllFilesOfDataAccessLayerAndHelper(txtPathAccessLayer.Text, cbDatabaseNAme.Text);
 
                 MessageBox.Show("Data Sccess Classes Added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -265,8 +263,6 @@ namespace Code_Generator
             }
             if (MessageBox.Show("Are you sure you want to generate bussiness calsses into this path", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                List<string> NameSpaceBussiness = txtBussinessLayer.Text.Split('\\').ToList();
-                _bussiness.NameSpaceBussiness = NameSpaceBussiness[NameSpaceBussiness.Count - 1];
                 _bussiness.GenerateAllFilesOfBussinessLayer(txtBussinessLayer.Text, cbDatabaseNAme.Text);
                 
                 MessageBox.Show("Bussiness Classes Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
