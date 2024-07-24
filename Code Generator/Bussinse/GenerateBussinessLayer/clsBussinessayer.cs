@@ -303,7 +303,7 @@ namespace Bussinse
 
         private string _GetNameSpaceDataAccess()
         {
-            return (_bussiness.NameSpaceBussiness == "" ? "InstituteDataAccess" : _bussiness.NameSpaceDataAccess);
+            return (_bussiness.NameSpaceBussiness == "" ? "InstituteDataAccess" : _bussiness.NameSpaceBussiness);
         }
 
         public StringBuilder GenerateBussinessLayer(string TableName)
