@@ -27,12 +27,13 @@ namespace Bussinse
             this.Tables = new List<string>();   
             this.Parametrs=new SortedDictionary<string, string>();
             this.PrimeryKeys = "";
-            this.NameSpaceDataAccess = "";
-            this.NameSpaceBussiness = "";
+            this.NameSpaceDataAccess = "InstituteDataAccess";
+            this.NameSpaceBussiness = "InstituteBussiness";
 
         }
         public clsBussiness(string DatabaseName, List< string> Tables,
-            SortedDictionary<string, string> Parametrs, string PrimereisKeys,string NameSpaceDataAccess,string NameSpaceBussiness)
+            SortedDictionary<string, string> Parametrs, string PrimereisKeys,
+            string NameSpaceDataAccess= "InstituteDataAccess",string NameSpaceBussiness= "InstituteBussiness")
         {
             this.DatabaseName = DatabaseName;
             this.Tables = Tables;
