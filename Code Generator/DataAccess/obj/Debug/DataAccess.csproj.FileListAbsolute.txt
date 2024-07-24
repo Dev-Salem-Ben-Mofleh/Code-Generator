@@ -4,3 +4,9 @@ E:\Code Generator\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
 E:\Code Generator\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 E:\Code Generator\DataAccess\obj\Debug\DataAccess.dll
 E:\Code Generator\DataAccess\obj\Debug\DataAccess.pdb
+E:\GithubProject\Code-Generator\Code Generator\DataAccess\bin\Debug\DataAccess.dll
+E:\GithubProject\Code-Generator\Code Generator\DataAccess\bin\Debug\DataAccess.pdb
+E:\GithubProject\Code-Generator\Code Generator\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+E:\GithubProject\Code-Generator\Code Generator\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+E:\GithubProject\Code-Generator\Code Generator\DataAccess\obj\Debug\DataAccess.dll
+E:\GithubProject\Code-Generator\Code Generator\DataAccess\obj\Debug\DataAccess.pdb

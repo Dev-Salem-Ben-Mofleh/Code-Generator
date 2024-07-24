@@ -26,7 +26,7 @@ namespace Bussinse
                 case "bigInt":
                     return "long?";
                 case "binary":
-                case "Image":
+                case "image":
                 case "varvinary":
                 case "timestamp":
                     return "byte[]";
@@ -35,7 +35,7 @@ namespace Bussinse
                 case "datetime":
                 case "datetime2":
                 case "date":
-                case "SmallDateTime":
+                case "smallDateTime":
                     return "DateTime";
                 case "time":
                     return "TimeSpan";
@@ -48,7 +48,7 @@ namespace Bussinse
                 case "text":
                     return "string";
                 case "decimal":
-                case "SmallMoney":
+                case "smallmoney":
                 case "money":
                 case "real":
                     return "decimal";
@@ -56,7 +56,7 @@ namespace Bussinse
                     return "double";
                 case "int":
                     return "int?";
-                case "UniqueIdentifier":
+                case "uniqueIdentifier":
                     return "Guid";
 
 

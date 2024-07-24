@@ -30,3 +30,18 @@ E:\المشاريع التي يجب أضافتها على قيت هوب\Code Gen
 E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.csproj.CopyComplete
 E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.exe
 E:\المشاريع التي يجب أضافتها على قيت هوب\Code Generator\obj\Debug\Code Generator.pdb
+E:\GithubProject\Code-Generator\Code Generator\bin\Debug\Code Generator.exe.config
+E:\GithubProject\Code-Generator\Code Generator\bin\Debug\Code Generator.exe
+E:\GithubProject\Code-Generator\Code Generator\bin\Debug\Code Generator.pdb
+E:\GithubProject\Code-Generator\Code Generator\bin\Debug\Bussinse.dll
+E:\GithubProject\Code-Generator\Code Generator\bin\Debug\DataAccess.dll
+E:\GithubProject\Code-Generator\Code Generator\bin\Debug\Bussinse.pdb
+E:\GithubProject\Code-Generator\Code Generator\bin\Debug\DataAccess.pdb
+E:\GithubProject\Code-Generator\Code Generator\obj\Debug\Code Generator.csproj.AssemblyReference.cache
+E:\GithubProject\Code-Generator\Code Generator\obj\Debug\Code_Generator.frmCodeGenerator.resources
+E:\GithubProject\Code-Generator\Code Generator\obj\Debug\Code_Generator.Properties.Resources.resources
+E:\GithubProject\Code-Generator\Code Generator\obj\Debug\Code Generator.csproj.GenerateResource.cache
+E:\GithubProject\Code-Generator\Code Generator\obj\Debug\Code Generator.csproj.CoreCompileInputs.cache
+E:\GithubProject\Code-Generator\Code Generator\obj\Debug\Code Gen.0C0DDA72.Up2Date
+E:\GithubProject\Code-Generator\Code Generator\obj\Debug\Code Generator.exe
+E:\GithubProject\Code-Generator\Code Generator\obj\Debug\Code Generator.pdb
